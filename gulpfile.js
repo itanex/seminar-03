@@ -59,6 +59,13 @@ var config = {
     }
 };
 
+gulp.task('default', [
+    'build:app',
+    'build:static',
+    'build:templates',
+    'build:vendorjs',
+    'build:vendorcss']);
+
 gulp.task('build:app', () => {
     return gulp.src(config.app.sources)
         .pipe(filelog())

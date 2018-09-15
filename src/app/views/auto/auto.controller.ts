@@ -8,6 +8,10 @@ namespace Seminar.View.Auto {
         public autoViews: Models.Auto[] = [];
         public autos: Models.Auto[] = [];
 
+        static $inject = [
+            '$resource'
+        ];
+
         constructor(
             $resource: ng.resource.IResourceService
         ) {
@@ -23,9 +27,10 @@ namespace Seminar.View.Auto {
          * Filter Method to bind to filter control
          */
         public filterAutos(): void {
-            this.autoViews = this.autos.filter((item: Models.Auto): boolean => {
-                return item.make.indexOf(this.filter) > -1;
-            })
+            this.autoViews = this.autos
+                .filter((item: Models.Auto): boolean => {
+                    return item.make.indexOf(this.filter) > -1;
+                })
         }
 
         /**

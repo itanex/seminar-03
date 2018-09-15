@@ -1,5 +1,5 @@
     <label>
-        Filter: <input type="text" ng-model="vm.filter" ng-change="vm.filterAutos()" 
+        Filter: <input type="text" ng-model="vm.filter" ng-change="vm.filterAutos()"
         ng-model-options="{ 'debounce': 250 }">
     </label>
     <table>
@@ -13,9 +13,6 @@
                 </td>
                 <td>
                     {{auto.year}}
-                </td>
-                <td>
-                    <button ng-click="vm.showIndex($index)">Show Index</button>
                 </td>
             </tr>
         </tbody>
